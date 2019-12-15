@@ -1,0 +1,20 @@
+<div class="top-level-menu" >
+<ul class="">
+  <li><a routerLinkActive = "active-link" routerLink="/" >Home</a></li>
+  <li>
+    <a class="dropdown">Locations</a>
+    <ul class="second-level-menu">
+      <li *ngFor="let loc of locations">
+        <a>{{loc?.location}}</a>
+        <ul class="third-level-menu">
+          <li *ngFor="let branch of loc?.branches" >
+            <a (click)="getCategory(branch['branchID'])">
+              {{branch.branchName}}
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>

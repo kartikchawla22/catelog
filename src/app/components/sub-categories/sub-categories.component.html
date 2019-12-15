@@ -1,0 +1,9 @@
+<div *ngIf="!subCategories" >Please Select Valid Category</div>
+<div class="list" *ngFor="let subCategory of subCategories">
+  <div class="card">
+    <img src="assets/images/subcategory/{{subCategory?.image}}" alt="{{subCategory?.name}}" style="width:100%">
+    <div class="container">
+      <h4><b><span>{{subCategory?.name}}</span></b></h4>
+    </div>
+  </div>
+</div>
